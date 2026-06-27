@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import DashboardLayout from '../layouts/DashboardLayout';
 import { AuthProvider } from '../context/AuthContext';
@@ -25,7 +25,7 @@ const AppRouter = () => {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <BrowserRouter>
+        <HashRouter>
           <ErrorBoundary>
             <Toaster position="top-right" />
             <Routes>
@@ -61,7 +61,7 @@ const AppRouter = () => {
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </ErrorBoundary>
-        </BrowserRouter>
+        </HashRouter>
     </AuthProvider>
     </ThemeProvider>
   );
