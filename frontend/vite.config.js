@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   return {
     plugins: [react()],
-    base: command === 'serve' ? '/' : '/AI-E-Learning-Doubt-Assitant/',
+    base: command === 'serve' ? '/' : './',
   }
 })
